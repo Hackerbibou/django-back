@@ -32,7 +32,7 @@ CORS_ALLOWED_ORIGINS = [
     "https://sub.example.com",
     "http://localhost:8080",
     "http://127.0.0.1:3000",
-    ".app.github.dev"
+    ".app.github.dev",
     "https://automatic-couscous-4r6775pxv56hjwv7-3000.app.github.dev"
 ]
 # Application definition
