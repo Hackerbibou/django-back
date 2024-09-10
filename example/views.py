@@ -11,8 +11,10 @@ def index(request):
     now = datetime.now()
     html = f'''
     <html>
-        <body>
-            <h1>Hello from Vercel!</h1>
+        <head>
+        <body style={{width:'100%',display:'flex', justifyContent:'center', alignItems:'center'}}>
+            <h1>Welcome to Habib's Chart Data API!</h1>
+            <p>Feel free to use this api for free chart data</p>
             <p>The current time is { now }.</p>
         </body>
     </html>
