@@ -20,7 +20,12 @@ def index(request):
     return HttpResponse(html)
 
 def candlestick(request):
-    return JsonResponse(data)
+    response = JsonResponse(data)
+    response["Access-Control-Allow-Origin"] = "*"
+    response["Access-Control-Allow-Methods"] = "GET, OPTIONS"
+    response["Access-Control-Max-Age"] = "1000"
+    return response
+
 
 def linechart(request):
     return JsonResponse(data1)
