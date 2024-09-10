@@ -25,15 +25,23 @@ SECRET_KEY = 'django-insecure-=cldztbc4jg&xl0!x673!*v2_=p$$eu)=7*f#d0#zs$44xx-h^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','127.0.0.1:8000', '127.0.0.1:3000','https://automatic-couscous-4r6775pxv56hjwv7-3000.app.github.dev','.app.github.dev', 'automatic-couscous-4r6775pxv56hjwv7-3000', '.vercel.app', 'localhost', 'localhost:3000' '.github.dev','django-back-three.vercel.app','minichart.vercel.app']
+ALLOWED_HOSTS = ['127.0.0.1','127.0.0.1:8000', '127.0.0.1:3000','.app.github.dev', 'automatic-couscous-4r6775pxv56hjwv7-3000', '.vercel.app', 'localhost', 'localhost:3000' '.github.dev','django-back-three.vercel.app','minichart.vercel.app']
 
-
+CORS_ALLOWED_ORIGINS = [
+    "https://example.com",
+    "https://sub.example.com",
+    "http://localhost:8080",
+    "http://127.0.0.1:3000",
+    ".app.github.dev"
+    "https://automatic-couscous-4r6775pxv56hjwv7-3000.app.github.dev"
+]
 # Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
+    'corsheaders',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
@@ -44,6 +52,8 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
+    "corsheaders.middleware.CorsMiddleware",
+    "django.middleware.common.CommonMiddleware",
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
