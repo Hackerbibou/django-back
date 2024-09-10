@@ -62,6 +62,7 @@ CORS_ALLOWED_ORIGINS = [
     "github.dev",
     "https://automatic-couscous-4r6775pxv56hjwv7-3000.app.github.dev"
 ]
+CORS_ORIGIN_ALLOW_ALL = True
 ROOT_URLCONF = 'api.urls'
 
 TEMPLATES = [
