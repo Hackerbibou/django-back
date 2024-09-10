@@ -8,7 +8,7 @@ from django.conf.urls.static import static
 
 
 urlpatterns = [
-    path('', views.candlestick,name='candlestick'),
+    path('', views.index),
     path("api/candlestick-data/", views.candlestick, name='candlestick'),
     path("api/line-chart-data/", views.linechart, name='linechart'),
     path("api/bar-chart-data/", views.barchart, name='barchart'),
