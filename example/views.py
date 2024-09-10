@@ -12,7 +12,7 @@ def index(request):
     html = f'''
     <html>
         <head>
-        <body style={{width:'100%',display:'flex', justifyContent:'center', alignItems:'center'}}>
+        <body>
             <h1>Welcome to Habib's Chart Data API!</h1>
             <p>Feel free to use this api for free chart data</p>
             <p>The current time is { now }.</p>
