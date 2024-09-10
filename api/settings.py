@@ -27,14 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1','127.0.0.1:8000', '127.0.0.1:3000','.app.github.dev', 'automatic-couscous-4r6775pxv56hjwv7-3000', '.vercel.app', 'localhost', 'localhost:3000' '.github.dev','django-back-three.vercel.app','minichart.vercel.app']
 
-CORS_ALLOWED_ORIGINS = [
-    "https://example.com",
-    "https://sub.example.com",
-    "http://localhost:8080",
-    "http://127.0.0.1:3000",
-    ".app.github.dev",
-    "https://automatic-couscous-4r6775pxv56hjwv7-3000.app.github.dev"
-]
 # Application definition
 
 INSTALLED_APPS = [
@@ -60,6 +52,16 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+CORS_ALLOWED_ORIGINS = [
+    "https://example.com",
+    "https://sub.example.com",
+    "http://localhost:8080",
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+    "app.github.dev",
+    "github.dev",
+    "https://automatic-couscous-4r6775pxv56hjwv7-3000.app.github.dev"
+]
 ROOT_URLCONF = 'api.urls'
 
 TEMPLATES = [
