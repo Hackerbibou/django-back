@@ -21,9 +21,6 @@ def index(request):
 
 def candlestick(request):
     response = JsonResponse(data)
-    response["Access-Control-Allow-Origin"] = "*"
-    response["Access-Control-Allow-Methods"] = "GET, OPTIONS"
-    response["Access-Control-Max-Age"] = "1000"
     return response
 
 
