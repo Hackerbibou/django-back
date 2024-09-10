@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-=cldztbc4jg&xl0!x673!*v2_=p$$eu)=7*f#d0#zs$44xx-h^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1','127.0.0.1:8000', '127.0.0.1:3000',"*",'.app.github.dev', 'automatic-couscous-4r6775pxv56hjwv7-3000', '.vercel.app', 'localhost', 'localhost:3000' '.github.dev','django-back-three.vercel.app','minichart.vercel.app']
 
@@ -41,30 +41,17 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    "corsheaders.middleware.CorsMiddleware",
-    "django.middleware.common.CommonMiddleware",
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ALLOWED_ORIGINS = [
-    "https://example.com",
-    'django-back-three.vercel.app',
-    "https://sub.example.com",
-    "*",
-    "http://localhost:8080",
-    "http://localhost:3000",
-    "http://127.0.0.1:3000",
-    "app.github.dev",
-    "github.dev",
-    "https://automatic-couscous-4r6775pxv56hjwv7-3000.app.github.dev"
-]
-CORS_ORIGIN_ALLOW_ALL = True
+
 ROOT_URLCONF = 'api.urls'
 
 TEMPLATES = [
@@ -134,3 +121,16 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+CORS_ALLOWED_ORIGINS = [
+    "https://example.com",
+    'django-back-three.vercel.app',
+    "https://sub.example.com",
+    "*",
+    "http://localhost:8080",
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+    "app.github.dev",
+    "github.dev",
+    "https://automatic-couscous-4r6775pxv56hjwv7-3000.app.github.dev"
+]
+CORS_ORIGIN_ALLOW_ALL = True
