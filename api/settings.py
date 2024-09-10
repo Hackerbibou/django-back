@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-=cldztbc4jg&xl0!x673!*v2_=p$$eu)=7*f#d0#zs$44xx-h^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','127.0.0.1:8000', '127.0.0.1:3000','.app.github.dev', 'automatic-couscous-4r6775pxv56hjwv7-3000', '.vercel.app', 'localhost', 'localhost:3000' '.github.dev','django-back-three.vercel.app','minichart.vercel.app']
+ALLOWED_HOSTS = ['127.0.0.1','127.0.0.1:8000', '127.0.0.1:3000',"*",'.app.github.dev', 'automatic-couscous-4r6775pxv56hjwv7-3000', '.vercel.app', 'localhost', 'localhost:3000' '.github.dev','django-back-three.vercel.app','minichart.vercel.app']
 
 # Application definition
 
@@ -54,7 +54,9 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "https://example.com",
+    'django-back-three.vercel.app',
     "https://sub.example.com",
+    "*",
     "http://localhost:8080",
     "http://localhost:3000",
     "http://127.0.0.1:3000",
