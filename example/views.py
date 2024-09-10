@@ -4,7 +4,7 @@ from django.http import JsonResponse
 from .data import *
 from django.http import HttpResponse
 from .data import *
-
+from django.shortcuts import render
 def index(request):
     context = {
         "title": "Django example",
